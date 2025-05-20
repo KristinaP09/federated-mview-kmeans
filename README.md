@@ -89,7 +89,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## References
 1. [Federated multi-view k-means clustering](https://ieeexplore.ieee.org/abstract/document/10810504) - IEEE TPAMI 2024
-2. Rectified gaussian kernel multi-view k-means clustering - arXiv 2024
+2. [Rectified gaussian kernel multi-view k-means clustering](https://arxiv.org/abs/2405.05619) - arXiv 2024
 
 ## Acknowledgments
 - This work was supported by the National Science and Technology Council, Taiwan (Grant Number: NSTC 112-2118-M-033-004)
