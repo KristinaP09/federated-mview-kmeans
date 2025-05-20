@@ -71,13 +71,17 @@ Gamma = 0.04;
 ## Citation
 If you use this code in your research, please cite our paper:
 ```bibtex
-@article{sinaga2024federated,
-  title={Federated Multi-View K-Means Clustering},
-  author={Sinaga, Kristina P. and others},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2024},
-  publisher={IEEE}
-}
+@ARTICLE{10810504,
+  author={Yang, Miin-Shen and Sinaga, Kristina P.},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Federated Multi-View K-Means Clustering}, 
+  year={2025},
+  volume={47},
+  number={4},
+  pages={2446-2459},
+  keywords={Clustering algorithms;Federated learning;Distributed databases;Data models;Data privacy;Machine learning algorithms;Kernel;Internet of Things;Servers;Training data;Clustering;K-means;multi-view data;multi-view k-means (MVKM);federated learning;federated MVKM;privacy},
+  doi={10.1109/TPAMI.2024.3520708}}
+
 ```
 
 ## License
