@@ -185,6 +185,16 @@ If you use this code in your research, please cite our paper:
   keywords={Clustering algorithms;Federated learning;Distributed databases;Data models;Data privacy;Machine learning algorithms;Kernel;Internet of Things;Servers;Training data;Clustering;K-means;multi-view data;multi-view k-means (MVKM);federated learning;federated MVKM;privacy},
   doi={10.1109/TPAMI.2024.3520708}
 }
+
+@misc{sinaga2024rectifiedgaussiankernelmultiview,
+      title={Rectified Gaussian kernel multi-view k-means clustering}, 
+      author={Kristina P. Sinaga},
+      year={2024},
+      eprint={2405.05619},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2405.05619}, 
+}
 ```
 
 ## License
@@ -196,7 +206,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## References
 1. [Federated multi-view k-means clustering](https://ieeexplore.ieee.org/abstract/document/10810504) - IEEE TPAMI 2024
-2. Rectified gaussian kernel multi-view k-means clustering - arXiv 2024
+2. [Rectified gaussian kernel multi-view k-means clustering](https://arxiv.org/abs/2405.05619) - arXiv 2024
 
 ## Acknowledgments
 - This work was supported by the National Science and Technology Council, Taiwan (Grant Number: NSTC 112-2118-M-033-004)
