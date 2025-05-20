@@ -15,9 +15,9 @@
 % Taiwan (Grant Number: NSTC 112-2118-M-033-004)
 %
 % References:
-%   [1] K. P. Sinaga et al., "Federated multi-view k-means clustering," 
+%   [1] M. -S. Yang and K. P. Sinaga, "Federated multi-view k-means clustering," 
 %       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024.
-%   [2] K. P. Sinaga et al., "Rectified gaussian kernel multi-view k-means 
+%   [2] K. P. Sinaga, "Rectified gaussian kernel multi-view k-means 
 %       clustering," arXiv, 2024.
 %
 % Example Usage:
