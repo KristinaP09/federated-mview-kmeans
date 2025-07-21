@@ -201,8 +201,9 @@ If you use this code in your research, please cite our paper:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
+
 - Kristina P. Sinaga
-- Email: kristinasinaga41@gmail.com
+- Email: kristinapestaria.sinaga@isti.cnr.it (The email address kristinasinaga41@gmail.com is no longer under my authority. Please do not use it to contact me.)
 
 ## References
 1. [Federated multi-view k-means clustering](https://ieeexplore.ieee.org/abstract/document/10810504) - IEEE TPAMI 2024
