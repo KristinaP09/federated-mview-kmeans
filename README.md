@@ -167,7 +167,7 @@ For detailed information about the dataset, please refer to the paper: "Human ac
 
 #### Example with DHA Dataset
 
-> 💡 **For a complete, working implementation with the DHA dataset, see [Comprehensive_demonstration.ipynb](./examples/Comprehensive_demonstration.ipynb)** which includes realistic data simulation, federated setup, training, and comprehensive evaluation with publication-ready results.
+> 💡 **For a complete, working implementation with the DHA dataset, see [Comprehensive_demonstration.ipynb](/federated-mview-kmeans/blob/main/Comprehensive_demonstration.ipynb)** which includes realistic data simulation, federated setup, training, and comprehensive evaluation with publication-ready results.
 
 ```python
 from mvkm_ed import FedMVKMED, FedMVKMEDParams
