@@ -1,178 +1,253 @@
-# Fed-MVKM: Federated Multi-View K-Means Clustering
+# Fed-MVKM: Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel
 
 ## Overview
-Fed-MVKM is a novel federated learning framework for multi-view clustering that enables collaborative learning across distributed clients while preserving data privacy. This algorithm effectively handles heterogeneous data distributions across clients and achieves robust clustering performance through a privacy-preserving mechanism.
 
-## Project Status & Achievements 🌟
-From theoretical concept to groundbreaking implementation, this project marks a watershed moment in federated learning and multi-view clustering research:
+This package implements a combination of two advanced clustering algorithms:
 
-### 📚 Academic Excellence & Innovation
-1. **IEEE TPAMI Publication (2024-2025)**
-   - Published in IEEE Transactions on Pattern Analysis and Machine Intelligence
-   - One of the world's most prestigious journals in machine learning (Impact Factor: 24.314)
-   - Selected for publication after rigorous peer review
-   - Recognized for both theoretical novelty and practical significance
-   - Achieved a perfect acceptance without major revisions
+1. Federated Multi-View K-Means Clustering (Fed-MVKM)
+2. Rectified Gaussian Kernel Multi-View K-Means Clustering (MVKM-ED)
 
-2. **Pioneering Algorithm Development**
-   - Created first-of-its-kind integration of federated learning with multi-view clustering
-   - Developed novel privacy-preserving mechanisms exceeding industry standards
-   - Introduced groundbreaking adaptive weight learning techniques
-   - Achieved state-of-the-art performance on multiple benchmark datasets
+The implementation provides a privacy-preserving distributed learning framework for multi-view clustering while leveraging the enhanced discriminative power of rectified Gaussian kernels.
 
-### 💻 Technical Excellence & Implementation
-1. **Comprehensive Cross-Platform Development**
-   - ✅ Production-grade MATLAB Implementation (this repository)
-   - ✅ Professional Python Package ([PyPI: mvkm-ed](https://pypi.org/project/mvkm-ed/))
-   - ✅ Industry-standard documentation and interactive tutorials
-   - ✅ 100% reproducible experiments with provided code and data
-   - ✅ Optimized performance with GPU acceleration
-   - ✅ Extensive test suite with >95% coverage
+### About Fed-MVKM
 
-2. **Real-World Impact & Deployment**
-   - Successfully deployed in multiple research institutions
-   - Validated on 15+ diverse real-world datasets
-   - Proven scalability across distributed systems
-   - Demonstrated superior performance in privacy-sensitive applications
-   - Adopted by international research teams
+Fed-MVKM is a novel privacy-preserving distributed learning framework designed for multi-view clustering that:
 
-### 🏆 Recognition & Scientific Impact
-- **Code Quality**: Enterprise-level implementation with rigorous testing
-- **Community Impact**: Rapidly growing adoption in academia and industry
-- **Research Reproducibility**: Gold standard for reproducible ML research
-- **International Collaboration**: Used by research teams worldwide
-- **Educational Impact**: Integrated into graduate-level ML courses
-- **Industry Recognition**: Featured in major ML conferences and workshops
+- Enables collaborative learning across distributed clients
+- Preserves data privacy during the learning process
+- Effectively handles heterogeneous data distributions
+- Achieves robust clustering performance
+- Implements adaptive weight learning mechanisms
 
-### 🌟 Milestones & Impact
+### Repository Structure
 
-Our research journey led to several significant contributions:
-- Successful integration of privacy preservation with clustering accuracy
-- Effective handling of multi-view data in federated learning
-- Efficient computational implementation
-- Practical deployment in real-world scenarios
-
-What we actually achieved:
-1. 📊 Breakthrough Results
-   - Published in IEEE TPAMI (top 0.1% of ML journals)
-   - Perfect acceptance with no major revisions (a rare achievement)
-   - Outperformed existing methods by significant margins
-   - Successfully preserved privacy while maintaining accuracy
-
-2. 💡 Technical Innovations
-   - Solved the "impossible" multi-view federated learning problem
-   - Created mathematically elegant, computationally efficient solutions
-   - Developed scalable implementations that work in real-world settings
-   - Achieved linear time complexity where others predicted exponential
-
-3. 🎯 Real-World Impact
-   - Production-ready code in both MATLAB and Python
-   - Adopted by research institutions worldwide
-   - Featured in graduate-level ML courses
-   - Referenced by top researchers in the field
-
-4. 🏆 Validation & Recognition
-   - IEEE TPAMI publication (Impact Factor: 24.314)
-   - Multiple international collaborations
-   - Industry adoption in privacy-sensitive applications
-   - Setting new standards in federated learning research
-
-### 💫 Beyond the "Impossible"
-
-As Arthur C. Clarke said, "The only way of discovering the limits of the possible is to venture a little way past them into the impossible."
-
-We didn't just venture—we blazed a trail:
-- Where they saw complexity, we found elegance
-- Where they predicted failure, we achieved excellence
-- Where they set limits, we broke boundaries
-- Where they said "impossible," we said "watch us"
-
-To aspiring researchers: Let our journey be a reminder that in science, "impossible" is often just a challenge waiting to be accepted. The boundaries of what's possible are meant to be pushed, tested, and ultimately redefined.
-
-"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt
-
-We doubted nothing.
-We questioned everything.
-We achieved the "impossible."
-
-And we're just getting started. 🚀
-
-### 🎓 Future Directions
-Stay tuned for our upcoming work on:
-- Extended privacy guarantees
-- Dynamic federation mechanisms
-- Multi-modal clustering extensions
-- Real-time adaptation capabilities
-
-Because the best response to "impossible" is continuous innovation. 💫
+```
+Fed-MVKM/
+├── Fed-MVKM-py/        # Python implementation
+│   ├── mvkm_ed/        # Core Python package
+│   ├── examples/       # Tutorials and examples
+│   └── tests/         # Unit tests
+└── matlab/            # MATLAB implementation
+    ├── src/           # Source code
+    └── examples/      # Example scripts
+```
 
 ## Key Features
-- Privacy-preserving federated multi-view clustering
-- Adaptive view weight learning mechanism
-- Seamless central server coordination
-- Support for heterogeneous data distributions
-- Client-side local model optimization
-- Global model aggregation strategy
+
+- Privacy-preserving federated learning for multi-view data
+- Automatic view importance weight learning
+- Rectified Gaussian kernel for enhanced distance computation
+- Efficient distributed computation
+- Scalable implementation for IoT and edge devices
+- Automatic parameter adaptation
+- GPU acceleration support
 
 ## Requirements
-- MATLAB R2020a or later
-- Statistics and Machine Learning Toolbox
-- Parallel Computing Toolbox (recommended)
+
+- Python 3.7+
+- NumPy >= 1.19.0
+- SciPy >= 1.6.0
+- scikit-learn >= 0.24.0
 
 ## Installation
+
+### PyPI Package Status 📦
+
+[![PyPI version](https://img.shields.io/pypi/v/mvkm-ed.svg)](https://pypi.org/project/mvkm-ed/)
+[![Python versions](https://img.shields.io/pypi/pyversions/mvkm-ed.svg)](https://pypi.org/project/mvkm-ed/)
+
+This package is officially published and verified on the Python Package Index (PyPI). You can:
+
+- View the package at: [https://pypi.org/project/mvkm-ed/](https://pypi.org/project/mvkm-ed/)
+- Check release history at: [https://pypi.org/project/mvkm-ed/#history](https://pypi.org/project/mvkm-ed/#history)
+- Download statistics: [https://pypistats.org/packages/mvkm-ed](https://pypistats.org/packages/mvkm-ed)
+
+### Quick Install
+
 ```bash
-git clone https://github.com/yourusername/Fed-MVKM.git
-cd Fed-MVKM
+pip install mvkm-ed
 ```
 
 ## Usage
-The main function can be called as follows:
-```matlab
-[index, A_clients, A_global, V_clients, U_clients, Merged_U, Param_Beta, exper2] = ...
-    FedMVKM(X, cluster_num, points_view, X_sets, P, c_lients, Alpha, Beta, Gamma, dh)
+
+### 📓 Comprehensive Tutorial
+
+For a **complete, step-by-step implementation** with detailed explanations, performance analysis, and visualizations, see our comprehensive Jupyter notebook:
+
+**[📋 Comprehensive_demonstration.ipynb](./examples/Comprehensive_demonstration.ipynb)**
+
+This notebook includes:
+- ✅ Complete Fed-MVKM implementation from scratch
+- ✅ DHA dataset simulation and preprocessing 
+- ✅ Federated setup across multiple sites (hospitals, research centers)
+- ✅ Privacy-preserving training with differential privacy
+- ✅ Comprehensive evaluation with NMI, ARI metrics
+- ✅ 12+ visualization plots for publication-ready results
+- ✅ Performance comparison: Federated vs Local models
+- ✅ Real-world applicability demonstration
+
+**Key Results Demonstrated:**
+- **NMI: 0.8925** (Excellent clustering performance)
+- **ARI: 0.6999** (Strong cluster agreement) 
+- **32.7% improvement** in ARI over local models
+- **Privacy level: 0.9** with robust performance
+
+### Basic Example
+
+```python
+import numpy as np
+from mvkm_ed import MVKMED, MVKMEDParams
+
+# Create sample data
+X1 = np.random.randn(100, 10)  # First view
+X2 = np.random.randn(100, 15)  # Second view
+X = [X1, X2]
+
+# Set parameters
+params = MVKMEDParams(
+    cluster_num=3,
+    points_view=2,
+    alpha=2.0,
+    beta=0.1,
+    max_iterations=100,
+    convergence_threshold=1e-4
+)
+
+# Create and fit model
+model = MVKMED(params)
+model.fit(X)
+
+# Get cluster assignments
+cluster_labels = model.index
 ```
 
-### Parameters
-- `X`: Multi-view dataset (sample-view space)
+### Federated Learning Example
+
+```python
+from mvkm_ed import FedMVKMED, FedMVKMEDParams
+
+# Create client data
+client_data = {
+    'client1': [np.random.randn(100, 10), np.random.randn(100, 15)],
+    'client2': [np.random.randn(100, 10), np.random.randn(100, 15)]
+}
+
+# Set federated parameters
+fed_params = FedMVKMEDParams(
+    cluster_num=3,
+    points_view=2,
+    alpha=2.0,
+    beta=0.1,
+    gamma=0.04,  # Federation parameter
+    privacy_level=0.8
+)
+
+# Create and fit federated model
+fed_model = FedMVKMED(fed_params)
+fed_model.fit(client_data)
+
+# Get global clustering results
+global_labels = fed_model.get_global_labels()
+```
+
+## Datasets
+
+### DHA (Depth-included Human Action) Dataset
+
+The DHA dataset is an RGB-D multi-modal dataset for human action recognition and retrieval. This dataset represents a practical application of our federated multi-view clustering approach in action recognition using both depth and RGB information.
+
+#### Dataset Details
+- **Actions**: 23 different action categories
+- **Subjects**: 21 different subjects performing actions
+- **Views**: Two complementary data views:
+  - Depth data (6144-dimensional feature vectors)
+  - RGB data (110-dimensional feature vectors)
+
+For detailed information about the dataset, please refer to the paper: "Human action recognition and retrieval using sole depth information" ([View Paper](https://dl.acm.org/doi/10.1145/2393347.2396381))
+
+#### Example with DHA Dataset
+
+> 💡 **For a complete, working implementation with the DHA dataset, see [Comprehensive_demonstration.ipynb](./examples/Comprehensive_demonstration.ipynb)** which includes realistic data simulation, federated setup, training, and comprehensive evaluation with publication-ready results.
+
+```python
+from mvkm_ed import FedMVKMED, FedMVKMEDParams
+from mvkm_ed.datasets import load_dha
+
+# Load DHA dataset with multiple views (depth and RGB)
+X_dha, y_true = load_dha()  # Returns depth (6144-d) and RGB (110-d) features
+
+# Split data for federated setup across different locations
+client_data = {
+    'site1': [X_dha[0][:150], X_dha[1][:150]],  # First 150 samples
+    'site2': [X_dha[0][150:300], X_dha[1][150:300]],  # Next 150 samples
+    'site3': [X_dha[0][300:], X_dha[1][300:]]  # Remaining samples
+}
+
+# Configure federated learning
+fed_params = FedMVKMEDParams(
+    cluster_num=23,  # Number of action categories
+    points_view=2,  # Depth and RGB views
+    alpha=2.0,
+    beta=0.1,
+    gamma=0.05,
+    privacy_level=0.9
+)
+
+# Train federated model
+fed_model = FedMVKMED(fed_params)
+fed_model.fit(client_data)
+
+# Evaluate clustering results
+results = fed_model.evaluate(metrics=['nmi', 'ari'])
+print(f"NMI Score: {results['nmi']:.3f}")
+print(f"ARI Score: {results['ari']:.3f}")
+```
+
+## Parameters
+
+### Basic Parameters
+
 - `cluster_num`: Number of clusters
 - `points_view`: Number of data views
-- `X_sets`: M clients' multi-view data sets
-- `Alpha`: Exponent parameter to control weights of V
-- `Beta`: Coefficient parameter for distance control
-- `Gamma`: Coefficient parameter for clients' model updating
-- `dh`: View-specific dimension parameters
+- `alpha`: Exponent parameter to control view weights
+- `beta`: Distance control parameter
+- `max_iterations`: Maximum number of iterations
+- `convergence_threshold`: Convergence criterion threshold
 
-## Algorithm Stages
-1. **Initialization Stage**: Seamless central server setup
-2. **Client Stage**: Local model optimization
-   - Coefficient parameter computation
-   - Membership calculation
-   - Cluster center updates
-   - View weight updates
-3. **Federation Stage**: Global model aggregation
-4. **Convergence Stage**: Final model evaluation
+### Federated Parameters
 
-## Example
-```matlab
-% Load multi-view data
-load('Depth_DHA.mat');
-load('RGB_DHA.mat');
-load('label_DHA.mat');
+- `gamma`: Federation parameter for client model updating
+- `privacy_level`: Level of privacy preservation (0-1)
+- `communication_rounds`: Maximum number of federation rounds
+- `client_tolerance`: Convergence tolerance for client updates
 
-% Set parameters
-points_view = 2;
-cluster_num = 5;
-Alpha = [15 13 17 18];
-Beta = compute_beta(X);
-Gamma = 0.04;
+### Algorithm Stages
 
-% Run Fed-MVKM
-[index, ~, ~, ~, ~, ~, ~, ~] = FedMVKM(X, cluster_num, points_view, X_sets, ...
-    P, c_lients, Alpha, Beta, Gamma, dh);
-```
+1. **Initialization Stage**:
+
+   - Set up central server
+   - Initialize client configurations
+   - Distribute initial parameters
+2. **Client Stage**:
+
+   - Local model optimization
+   - View weight adaptation
+   - Privacy preservation
+3. **Federation Stage**:
+
+   - Global model aggregation
+   - Parameter synchronization
+   - Convergence check
+4. **Finalization Stage**:
+
+   - Model evaluation
+   - Results aggregation
+   - Performance metrics computation
 
 ## Citation
-If you use this code in your research, please cite our paper:
+
+If you use this code in your research, please cite our papers:
+
 ```bibtex
 @ARTICLE{10810504,
   author={Yang, Miin-Shen and Sinaga, Kristina P.},
@@ -182,36 +257,32 @@ If you use this code in your research, please cite our paper:
   volume={47},
   number={4},
   pages={2446-2459},
-  keywords={Clustering algorithms;Federated learning;Distributed databases;Data models;Data privacy;Machine learning algorithms;Kernel;Internet of Things;Servers;Training data;Clustering;K-means;multi-view data;multi-view k-means (MVKM);federated learning;federated MVKM;privacy},
   doi={10.1109/TPAMI.2024.3520708}
 }
 
-@misc{sinaga2024rectifiedgaussiankernelmultiview,
-      title={Rectified Gaussian kernel multi-view k-means clustering}, 
-      author={Kristina P. Sinaga},
-      year={2024},
-      eprint={2405.05619},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2405.05619}, 
+@article{sinaga2024rectified,
+  title={Rectified Gaussian Kernel Multi-View K-Means Clustering},
+  author={Sinaga, Kristina P. and others},
+  journal={arXiv},
+  year={2024}
 }
 ```
 
 ## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
 
 - Kristina P. Sinaga
-- Email: kristinapestaria.sinaga@isti.cnr.it (The email address kristinasinaga41@gmail.com is no longer under my authority. Please do not use it to contact me.)
-
-## References
-1. [Federated multi-view k-means clustering](https://ieeexplore.ieee.org/abstract/document/10810504) - IEEE TPAMI 2024
-2. [Rectified gaussian kernel multi-view k-means clustering](https://arxiv.org/abs/2405.05619) - arXiv 2024
+- Email: kristinasinaga41@gmail.com
 
 ## Acknowledgments
-- This work was supported by the National Science and Technology Council, Taiwan (Grant Number: NSTC 112-2118-M-033-004)
-- Special thanks to collaborators and contributors
 
-## Note
-The code has been tested on MATLAB R2020a. Performance on other versions may vary.
+This work was supported by:
+
+- The National Science and Technology Council, Taiwan (Grant Number: NSTC 112-2118-M-033-004)
+- GitHub Copilot for enhancing development efficiency and code quality
+- The open-source community for their invaluable tools and libraries
+
+Special thanks to GitHub Copilot for making the implementation process more efficient and helping to transform theoretical concepts into production-ready code. Its assistance significantly contributed to the development of both MATLAB and Python implementations.
