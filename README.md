@@ -74,7 +74,7 @@ pip install mvkm-ed
 
 For a **complete, step-by-step implementation** with detailed explanations, performance analysis, and visualizations, see our comprehensive Jupyter notebook:
 
-**[📋 Comprehensive_demonstration.ipynb](./examples/Comprehensive_demonstration.ipynb)**
+**[📋 Comprehensive_demonstration.ipynb](https://github.com/KristinaP09/federated-mview-kmeans/blob/main/Comprehensive_demonstration.ipynb)**
 
 This notebook includes:
 - ✅ Complete Fed-MVKM implementation from scratch
